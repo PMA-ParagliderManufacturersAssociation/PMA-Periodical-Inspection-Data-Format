@@ -1,5 +1,4 @@
 {
-    "_comment": "Template inspection_body to manufactuer",
     "manufacturer": "BestGlider",
     "model": "Tornado",
     "size": "ML",
@@ -14,14 +13,46 @@
     "visual_inspection_lines": "damaged , to be changed ",
     "visual_inspection_risers": "used",
     "porosimeter_model": "JDC mk2",
-    "porosity_upper_panel": "4",
-    "porosity_upper_value": 157,
-    "porosity_lower_panel": "7",
-    "porosity_lower_value": 57,
-    "tear_strength_upper_panel": "4_1",
-    "tear_strength_upper_result": "OK",
-    "tear_strength_lower_panel": "7_2",
-    "tear_strength_upper_result": "1600",
+    "porosity_upper": [
+        {
+            "panel": "4",
+            "value": 157
+        },
+        {
+            "panel": "5",
+            "value": 160
+        }
+    ],
+    "porosity_lower": [
+        {
+            "panel": "7",
+            "value": 57
+        },
+        {
+            "panel": "8",
+            "value": 55
+        }
+    ],
+    "tear_strength_upper": [
+        {
+            "panel": "4_1",
+            "result": "OK"
+        },
+        {
+            "panel": "5_3",
+            "result": "1500"
+        }
+    ],
+    "tear_strength_lower": [
+        {
+            "panel": "7_2",
+            "result": "1600"
+        },
+        {
+            "panel": "8_4",
+            "result": "1550"
+        }
+    ],
     "line_strengths": [
         {
             "name": "AR1",

@@ -1,0 +1,114 @@
+{
+    "type": "object",
+    "properties": {
+        "_comment": {
+            "type": "string"
+        },
+        "PMA_file_format": {
+            "type": "string"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "size": {
+            "type": "string"
+        },
+        "weight_min": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "weight_max": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "inspection_interval": {
+            "type": "string"
+        },
+        "inspection_protocol": {
+            "type": "string"
+        },
+        "line_details": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "material": {
+                        "type": "string"
+                    },
+                    "color": {
+                        "type": "string"
+                    },
+                    "construction_details": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "sewn_length": {
+                        "type": "integer",
+                        "minimum": 0
+                    },
+                    "minimum_strength": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "parent": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "material",
+                    "color",
+                    "sewn_length",
+                    "minimum_strength",
+                    "parent"
+                ]
+            }
+        },
+        "total_line_lengths": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "total_length": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "name",
+                    "total_length"
+                ]
+            }
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "_comment",
+        "PMA_file_format",
+        "manufacturer",
+        "model",
+        "size",
+        "weight_min",
+        "weight_max",
+        "inspection_interval",
+        "inspection_protocol",
+        "line_details",
+        "total_line_lengths"
+    ]
+}

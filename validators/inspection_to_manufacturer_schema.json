@@ -1,0 +1,202 @@
+{
+    "type": "object",
+    "properties": {
+        "PMA_file_format": {
+            "type": "string"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "size": {
+            "type": "string"
+        },
+        "standard_version": {
+            "type": "string"
+        },
+        "serial_number": {
+            "type": "string"
+        },
+        "inspection_date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "_comment": {
+            "type": "string"
+        },
+        "visual_inspection_stickers": {
+            "type": "string"
+        },
+        "visual_inspection_upper_surface": {
+            "type": "string"
+        },
+        "visual_inspection_lower_surface": {
+            "type": "string"
+        },
+        "visual_inspection_internal_structure": {
+            "type": "string"
+        },
+        "visual_inspection_line_attachment_points": {
+            "type": "string"
+        },
+        "visual_inspection_lines": {
+            "type": "string"
+        },
+        "visual_inspection_risers": {
+            "type": "string"
+        },
+        "porosimeter_model": {
+            "type": "string"
+        },
+        "porosity_upper": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "panel": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "panel",
+                    "value"
+                ]
+            }
+        },
+        "porosity_lower": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "panel": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "panel",
+                    "value"
+                ]
+            }
+        },
+        "tear_strength_upper": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "panel": {
+                        "type": "string"
+                    },
+                    "result": {
+                        "type": [
+                            "string",
+                            "integer"
+                        ]
+                    }
+                },
+                "required": [
+                    "panel",
+                    "result"
+                ]
+            }
+        },
+        "tear_strength_lower": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "panel": {
+                        "type": "string"
+                    },
+                    "result": {
+                        "type": [
+                            "string",
+                            "integer"
+                        ]
+                    }
+                },
+                "required": [
+                    "panel",
+                    "result"
+                ]
+            }
+        },
+        "line_strengths": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "name",
+                    "value"
+                ]
+            }
+        },
+        "total_line_geometry": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "total_length": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "name",
+                    "total_length"
+                ]
+            }
+        },
+        "modifications": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "PMA_file_format",
+        "manufacturer",
+        "model",
+        "size",
+        "standard_version",
+        "serial_number",
+        "inspection_date",
+        "visual_inspection_stickers",
+        "visual_inspection_upper_surface",
+        "visual_inspection_lower_surface",
+        "visual_inspection_internal_structure",
+        "visual_inspection_line_attachment_points",
+        "visual_inspection_lines",
+        "visual_inspection_risers",
+        "porosimeter_model",
+        "porosity_upper",
+        "porosity_lower",
+        "tear_strength_upper",
+        "tear_strength_lower",
+        "line_strengths",
+        "total_line_geometry",
+        "modifications"
+    ]
+}
