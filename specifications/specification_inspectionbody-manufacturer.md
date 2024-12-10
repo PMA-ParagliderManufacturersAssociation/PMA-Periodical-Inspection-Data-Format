@@ -13,15 +13,6 @@ All units must adhere to the standards described in the PMA standard.
 #### Info
 This specification defines the JSON format for data exchanged from inspection bodies to manufacturers. This format includes the inspection results.
 
-To :    Paraglider manufacturer
-
-Specification Version : 1.0
-
-Document version : 1.0 
-Units: all the units should be the same than the one describe in the PMA standard.
-info : 
-This specification defines the JSON format for data exchanged from  inspection bodies to manufacturers to. This format includes the inspections results.
-
 
 #### General Structure
 
@@ -38,7 +29,7 @@ This specification defines the JSON format for data exchanged from  inspection b
 
 ---
 
-#### Visual Inspection Fields
+#### Visual Inspection 
 
 | Field                                  | Type         | Description                             |
 |----------------------------------------|--------------|-----------------------------------------|
@@ -52,7 +43,7 @@ This specification defines the JSON format for data exchanged from  inspection b
 
 ---
 
-#### Porosity Fields
+#### Fabric Porosity 
 
 | Field                     | Type         | Description                                  |
 |---------------------------|--------------|----------------------------------------------|
@@ -66,20 +57,20 @@ This specification defines the JSON format for data exchanged from  inspection b
 
 ---
 
-#### Tear Strength Fields
+#### Fabric Tear Strength 
 
 | Field                         | Type       | Description                                     |
 |-------------------------------|------------|-------------------------------------------------|
 | `tear_strength_upper`         | `array`    | Array of objects representing tear strength measurements for the upper surface |
 | - `panel`                     | `string`   | Panel number for the measurement               |
-| - `result`                    | `string` or `integer` | Tear strength result, which can be a descriptive status (`"OK"`, `"Bad"`, `"Fail"`) or a numeric value (e.g., `750`, `1200`) |
+| - `result`                    | `string` or `integer` | Tear strength result, which can be a descriptive status (`"Good"`, `"Acceptable"`, `"Fail"`) or a numeric value (e.g., `750`, `1200`) |
 | `tear_strength_lower`         | `array`    | Array of objects representing tear strength measurements for the lower surface |
 | - `panel`                     | `string`   | Panel number for the measurement               |
-| - `result`                    | `string` or `integer` | Tear strength result, which can be a descriptive status (`"OK"`, `"Bad"`, `"Fail"`) or a numeric value (e.g., `750`, `1200`) |
+| - `result`                    | `string` or `integer` | Tear strength result, which can be a descriptive status (`"Good"`, `"Acceptable"`, `"Fail"`) or a numeric value (e.g., `750`, `1200`) |
 
 ---
 
-#### Line Strengths
+#### Line Strength 
 
 | Field                | Type      | Description                                  |
 |----------------------|-----------|----------------------------------------------|
@@ -89,7 +80,7 @@ This specification defines the JSON format for data exchanged from  inspection b
 
 ---
 
-#### Total Line Geometry
+#### Line Geometry
 
 | Field                     | Type      | Description                                |
 |---------------------------|-----------|--------------------------------------------|
