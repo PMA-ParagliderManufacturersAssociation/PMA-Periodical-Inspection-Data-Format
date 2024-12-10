@@ -15,7 +15,7 @@ This specification defines the JSON format for data exchanged from manufacturers
 
 
 ---
-#### General Fields
+#### General 
 
 | Field                        | Type        | Description                                                                 |
 |------------------------------|-------------|-----------------------------------------------------------------------------|
