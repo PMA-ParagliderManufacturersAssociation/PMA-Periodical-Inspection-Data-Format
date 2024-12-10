@@ -23,8 +23,8 @@ This specification defines the JSON format for data exchanged from manufacturers
 | `manufacturer`               | `string`    | Name of the paraglider manufacturer                                                   |
 | `model`                      | `string`    | Model name of the paraglider                                                |
 | `size`                       | `string`    | Paraglider Size                                                            |
-| `weight_min`                 | `integer`   | Minimum glider of the paraglider weight range (in kg)                                       |
-| `weight_max`                 | `integer`   | Maximun glider of the paraglider weight range (in kg)                                   |
+| `weight_min`                 | `integer`   | Minimum of the paraglider weight range (in kg)                                       |
+| `weight_max`                 | `integer`   | Maximum of the paraglider weight range (in kg)                                   |
 | `inspection_interval`        | `string`    | Recommended inspection interval (e.g., time or usage hours)                |
 | `inspection_protocol`        | `string`    | Protocol details, including deviations from PMA standards                  |
 | `standard_version`           | `string`    | Which version of the standard to use during the inspection   |
