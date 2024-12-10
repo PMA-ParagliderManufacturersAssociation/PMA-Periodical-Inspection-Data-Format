@@ -13,6 +13,7 @@ All units must adhere to the standards described in the PMA standard.
 #### Info
 This specification defines the JSON format for data exchanged from inspection bodies to manufacturers. This format includes the inspection results.
 
+---
 
 #### General Structure
 
