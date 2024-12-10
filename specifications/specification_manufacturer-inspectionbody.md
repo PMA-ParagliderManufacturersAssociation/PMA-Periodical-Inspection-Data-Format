@@ -1,6 +1,6 @@
-## Manufacturer to Inspection Body Specification
+## JSON Format Specification: Manufacturer to Inspection Body
 
-### Manufacturer to Inspection Body Specification
+### Manufacturer information needed for the inspection
 
 - **From:** Paraglider manufacturer  
 - **To:** Inspection body  
