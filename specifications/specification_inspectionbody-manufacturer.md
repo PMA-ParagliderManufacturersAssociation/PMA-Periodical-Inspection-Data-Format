@@ -1,6 +1,6 @@
-## Inspection Report JSON Format Specification
+## JSON Format Specification: Inspection Body to Manufacturer
 
-### Inspection Body to Manufacturer Specification
+### Detailed reports of inspection results
 
 - **From:** Inspection body  
 - **To:** Paraglider manufacturer  
@@ -15,7 +15,7 @@ This specification defines the JSON format for data exchanged from inspection bo
 
 ---
 
-#### General Structure
+#### General
 
 | Field                              | Type                   | Description                                                    |
 |------------------------------------|------------------------|----------------------------------------------------------------|
