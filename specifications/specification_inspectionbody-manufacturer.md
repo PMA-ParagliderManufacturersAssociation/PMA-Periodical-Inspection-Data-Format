@@ -26,7 +26,6 @@ This specification defines the JSON format for data exchanged from inspection bo
 | `standard_version`                 | `string`               | Which version of the standard was used during the inspection   |
 | `serial_number`                    | `string`               | Unique serial number of the inspected glider                   |
 | `inspection_date`                  | `string (datetime)`    | Date and time of inspection (ISO 8601)                         |
-| `_comment`                         | `string`               | Optional comment              |
 
 ---
 
