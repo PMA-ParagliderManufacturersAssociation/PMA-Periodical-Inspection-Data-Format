@@ -1,0 +1,158 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://github.com/PMA-ParagliderManufacturersAssociation/PMA-Periodical-Inspection-Data-Format/schemas/v1.0/manufacturer-inspectionbody.schema.json",
+	"title": "PMA Periodical Inspection Data Format: Manufacturer to Inspection Body (v1.0)",
+	"description": "Paraglider specification published by a glider manufacturer for use by inspection bodies.",
+	"type": "object",
+	"properties": {
+
+		"PMA_file_format": {
+			"description": "Version of the PMA file format standard",
+			"type": "string",
+			"const": "1.0"
+		},
+
+		"manufacturer": {
+			"description": "Name of the paraglider manufacturer",
+			"type": "string"
+		},
+
+		"model": {
+			"description": "Model name of the paraglider",
+			"type": "string"
+		},
+
+		"size": {
+			"description": "Paraglider size",
+			"type": "string"
+		},
+		
+		"weight_min": {
+			"description": "Minimum of the paraglider weight range (in kg)",
+			"type": "integer"
+		},
+		
+		"weight_max": {
+			"description": "Maximum of the paraglider weight range (in kg)",
+			"type": "integer"
+		},
+
+		"inspection_interval": {
+			"description": "Recommended inspection interval (e.g., time or usage hours)",
+			"type": "string"
+		},
+		
+		"inspection_protocol": {
+			"description": "Protocol details, including deviations from PMA standards",
+			"type": "string"
+		}
+		
+		"standard_version": {
+			"description": "Which version of the standard to use during the inspection",
+			"type": "string"
+		}
+		
+		"line_details": {
+			"description": "Array of objects describing the details of individual lines",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+				
+					"name": {
+						"description": "Name of the line",
+						"type": "string"
+					},
+					
+					"material": {
+						"description": "Identifies the type of line stock used to make the line (manufacturer, type, and capacity)",
+						"type": "string"
+					},
+					
+					"color": {
+						"description": "Line color",
+						"type": "string"
+					},
+					
+					"construction_details": {
+						"description": "Construction details (e.g. reinforcements)",
+						"type": ["string", "null"]
+					},
+					
+					"sewn_length": {
+						"description": "Sewn length of the line (in mm)",
+						"type": "integer"
+					},
+					
+					"minimum_strength": {
+						"description": "Minimum strength of the line (in daN)",
+						"type": "number"
+					},
+					
+					"new_strength": {
+						"description": "Nominal strength of the line when new (in daN)",
+						"type": "number"
+					},
+					
+					"parent": {
+						"description": "Name of the parent line (or null if it has no parent)",
+						"type": ["string", "null"]
+					},
+				
+				},
+				"required": [
+					"name",
+					"material",
+					"color",
+					"construction_details",
+					"sewn_length",
+					"minimum_strength",
+					"parent"
+				]
+			}
+		},
+		
+		"total_line_lengths": {
+			"description": "Array of objects representing the total length of connected lines",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+				
+					"name": {
+						"description": "Name of uppermost line",
+						"type": "string"
+					},
+					
+					"total_length": {
+						"description": "Total length of lines (in mm)",
+						"type": "integer"
+					}
+				
+				},
+				"required": [
+					"name",
+					"total_length"
+				]
+			}
+		},
+		
+		"comment": {
+			"description": "Any additional comments or notes",
+			"type": "string"
+		}
+	},
+	"required": [
+		"PMA_file_format",
+		"manufacturer",
+		"model",
+		"size",
+		"weight_min",
+		"weight_max",
+		"inspection_interval",
+		"inspection_protocol",
+		"standard_version",
+		"line_details",
+		"total_line_lengths"
+	]
+}
