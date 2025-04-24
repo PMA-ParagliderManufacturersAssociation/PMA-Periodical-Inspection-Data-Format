@@ -1,0 +1,256 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://github.com/PMA-ParagliderManufacturersAssociation/PMA-Periodical-Inspection-Data-Format/schemas/v1.0/inspectionbody-manufacturer.schema.json",
+	"title": "PMA Periodical Inspection Data Format: Inspection Body to Manufacturer (v1.0)",
+	"description": "Periodial inspection report supplied by an inspection body to the manufacturer of a paraglider.",
+	"type": "object",
+    "properties": {
+        
+		"PMA_file_format": {
+			"description": "Version of the PMA file format standard",
+            "type": "string",
+			"const": "1.0"
+        },
+        
+		"manufacturer": {
+            "description": "Name of the paraglider manufacturer",
+			"type": "string"
+        },
+        
+		"model": {
+            "description": "Model name of the paraglider",
+			"type": "string"
+        },
+        
+		"size": {
+            "description": "Paraglider size",
+			"type": "string"
+        },
+        
+		"standard_version": {
+            "description": "Which version of the standard was used during the inspection",
+			"type": "string"
+        },
+        
+		"serial_number": {
+            "description": "Unique serial number of the inspected glider",
+			"type": "string"
+        },
+        
+		"inspection_date": {
+            "description": "Date and time of inspection (ISO 8601)",
+			"type": "string",
+            "format": "date-time"
+        },
+        
+		"visual_inspection_stickers": {
+			"description": "Sticker inspection result",
+            "type": "string"
+        },
+		
+        "visual_inspection_upper_surface": {
+			"description": "Upper surface condition",
+            "type": "string"
+        },
+		
+        "visual_inspection_lower_surface": {
+			"description": "Lower surface condition",
+            "type": "string"
+        },
+		
+        "visual_inspection_internal_structure": {
+			"description": "Internal structure condition",
+            "type": "string"
+        },
+		
+        "visual_inspection_line_attachment_points": {
+			"description": "Line attachment point condition",
+            "type": "string"
+        },
+		
+        "visual_inspection_lines": {
+			"description": "Lines inspection result",
+            "type": "string"
+        },
+		
+        "visual_inspection_risers": {
+			"description": "Risers inspection result",
+            "type": "string"
+        },
+		
+        "porosimeter_model": {
+			"description": "Model of porosimeter used",
+            "type": "string"
+        },
+		
+        "porosity_upper": {
+			"description": "Array of objects representing porosity measurements for the upper surface",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+					
+                    "panel": {
+						"description": "Panel number for the measurement",
+                        "type": "string"
+                    },
+                    
+					"value": {
+						"description": "Porosity value for the panel",
+                        "type": "integer",
+                        "minimum": 0
+                    }
+					
+                },
+                "required": ["panel", "value"]
+            }
+        },
+		
+        "porosity_lower": {
+            "description": "Array of objects representing porosity measurements for the lower surface",
+			"type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+					
+                    "panel": {
+                        "description": "Panel number for the measurement",
+						"type": "string"
+                    },
+					
+                    "value": {
+                        "description": "Porosity value for the panel",
+						"type": "integer",
+                        "minimum": 0
+                    }
+					
+                },
+                "required": ["panel", "value"]
+            }
+        },
+		
+        "tear_strength_upper": {
+            "description": "Array of objects representing tear strength measurements for the upper surface",
+			"type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+					
+                    "panel": {
+                        "description": "Panel number for the measurement",
+						"type": "string"
+                    },
+					
+                    "result": {
+                        "description": "Tear strength result, either descriptive or numeric measurement",
+						"type": ["string", "integer"]
+                    }
+					
+                },
+                "required": ["panel", "result"]
+            }
+        },
+		
+        "tear_strength_lower": {
+            "description": "Array of objects representing tear strength measurements for the lower surface",
+			"type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+					
+                    "panel": {
+                        "description": "Panel number for the measurement",
+						"type": "string"
+                    },
+					
+                    "result": {
+                        "description": "Tear strength result, either descriptive or numeric measurement",
+						"type": ["string", "integer"]
+                    }
+					
+                },
+                "required": ["panel", "result"]
+            }
+        },
+		
+        "line_strengths": {
+            "description": "Array of objects representing line strength measurements",
+			"type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+					
+                    "name": {
+                        "description": "Line identifier/name",
+						"type": "string"
+                    },
+					
+                    "value": {
+                        "description": "Measured strength value of the line",
+						"type": "integer",
+                        "minimum": 0
+                    }
+					
+                },
+                "required": ["name", "value"]
+            }
+        },
+		
+        "total_line_geometry": {
+            "description": "Array of objects representing total line length measurements",
+			"type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+					
+                    "name": {
+                        "description": "Name/identifier of uppermost line measured",
+						"type": "string"
+                    },
+					
+                    "total_length": {
+                        "description": "Total length of the measured lines in mm",
+						"type": "integer",
+                        "minimum": 0
+                    }
+					
+                },
+                "required": ["name", "total_length"]
+            }
+        },
+		
+        "modifications": {
+			"description": "Comments on any modifications",
+            "type": "string"
+        },
+		
+        "comment": {
+            "description": "Optional comment",
+			"type": "string"
+        }
+    },
+    "required": [
+        "PMA_file_format",
+        "manufacturer",
+        "model",
+        "size",
+        "standard_version",
+        "serial_number",
+        "inspection_date",
+        "visual_inspection_stickers",
+        "visual_inspection_upper_surface",
+        "visual_inspection_lower_surface",
+        "visual_inspection_internal_structure",
+        "visual_inspection_line_attachment_points",
+        "visual_inspection_lines",
+        "visual_inspection_risers",
+        "porosimeter_model",
+        "porosity_upper",
+        "porosity_lower",
+        "tear_strength_upper",
+        "tear_strength_lower",
+        "line_strengths",
+        "total_line_geometry",
+        "modifications"
+    ]
+}

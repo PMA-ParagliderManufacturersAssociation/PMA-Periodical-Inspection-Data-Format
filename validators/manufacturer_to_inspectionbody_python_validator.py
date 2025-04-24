@@ -10,7 +10,7 @@ Version: 1.0
 Date: 07/12/2024
 
 Usage:
-    1. Place the schema file (`manufacturer_to_inspection_schema.json`) in the same directory as this script.
+    1. Place the schema file (`manufacturer-inspectionbody.schema.json`) in the same directory as this script.
     2. Prepare the JSON data to validate in the `example_data` variable or load it from a file.
     3. Run the script:
        $ python validate_json.py
@@ -21,7 +21,7 @@ Dependencies:
     - jsonschema library (install using `pip install jsonschema`)
 
 Schema File:
-    The schema is stored in `manufacturer_to_inspection_schema.json`.
+    The schema is stored in `manufacturer-inspectionbody.schema.json`.
 
 Example Output:
     - "JSON data is valid." (if the JSON data complies with the schema)
@@ -41,7 +41,7 @@ def load_schema(schema_file):
 
 
 # Path to the schema file
-schema_path = "manufacturer_to_inspection_schema.json"
+schema_path = "manufacturer-inspectionbody.schema.json"
 
 # Load the schema
 schema = load_schema(schema_path)
